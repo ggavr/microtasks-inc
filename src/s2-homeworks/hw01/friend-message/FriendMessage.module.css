@@ -1,0 +1,41 @@
+.friendMessage {
+    /*border: 5px solid red;*/
+
+}
+
+.friendImageAndText {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.friendImageAndText img {
+    max-height: 50px;
+}
+
+.friendText {
+    background-color: #F5F7FB;
+    width: fit-content;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+
+}
+
+.friendText:after {
+
+}
+
+.friendName {
+    padding-bottom: 5px;
+
+}
+
+.friendMessageText {
+
+}
+
+.friendTime {
+    margin:-5px 25px;
+}
