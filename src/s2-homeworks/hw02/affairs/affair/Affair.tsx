@@ -6,7 +6,7 @@ import s2 from '../Affairs.module.css'
 type AffairPropsType = {
     // key не нужно типизировать
     affair: AffairType
-    deleteAffairCallback: (_id: number)=>void // need to fix any
+    deleteAffairCallback: (_id: number)=>void
 }
 
 // @ts-ignore
