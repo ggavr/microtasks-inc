@@ -1,22 +1,16 @@
 .greetingForm {
-    height: 17px;
-    width: 143px;
-    left: 70px;
-    top: 198px;
-
-
 
 }
 
 .inputAndButtonContainer {
     display: flex;
 
-    height: 36px;
-    width: 78px;
-    left: 454px;
-    top: 1024px;
-    border-radius: 3px;
-    padding: 5px 24px 5px 24px;
+    /*height: 36px;*/
+    /*width: 78px;*/
+    /*left: 454px;*/
+    /*top: 1024px;*/
+    /*border-radius: 3px;*/
+    /*padding: 5px 24px 5px 24px;*/
 
 }
 
@@ -39,16 +33,28 @@
 }
 
 .button {
+    margin: 0 10px;
     display: flex;
     justify-content: center;
-    background: #0066CC;
+    /*background: #0066CC;*/
+    /*border-radius: 5px;*/
+    /*align-items: center;*/
+    /*padding: 5px 20px;*/
+    /*color: #FFFFFF;*/
+    width: 55px;
+    height: 25px;
+    overflow: hidden;
+    padding: 2px 14px;
+background-color: #0080ff;
     border-radius: 3px;
-    align-items: center;
-    padding: 5px 24px;
-    color: #FFFFFF;
+    border: none;
 
-
-
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
 }
 
 .button:focus {
@@ -74,9 +80,8 @@
 }
 
 .greeting {
-    height: 17px;
-    width: 143px;
-    left: 70px;
-    top: 198px;
-
+    /*height: 17px;*/
+    /*width: 143px;*/
+    /*left: 70px;*/
+    /*top: 198px;*/
 }

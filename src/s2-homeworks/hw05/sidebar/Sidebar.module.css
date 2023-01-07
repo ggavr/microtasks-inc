@@ -1,7 +1,7 @@
 .sidebar {
     position: absolute;
     background-color: #FFFFFF;
-    width: 25%;
+    width: 20%;
     height: 100%;
     display: none;
 
@@ -46,7 +46,7 @@
 .nav a:hover {
     font-weight: 600;
     font-size: 22px;
-    color: #0059B2;
+    color: #0080ff;
 }
 
 .nav a.active {
@@ -56,9 +56,9 @@
     text-decoration-line: underline;
 }
 .close {
-
 }
 
 .close img {
-
+    position: absolute;
+    left: 90.98%;
 }

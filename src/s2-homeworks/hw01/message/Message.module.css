@@ -10,13 +10,12 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
-    margin: 10px;
-    padding: 10px;
+    /*margin: 10px;*/
+    /*padding: 10px;*/
 
 }
 
 .imageAndText img {
-
     max-height: 50px;}
 .text {
     width: fit-content;
@@ -43,5 +42,4 @@
 }
 
 .time {
-    margin:-5px 25px;
 }
