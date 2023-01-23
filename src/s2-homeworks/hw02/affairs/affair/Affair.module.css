@@ -3,7 +3,7 @@
     align-items: center;
     width: 185px;
 
-    border: 1.5px solid var(--color);
+    border: 3px solid var(--color);
     border-radius: 5px;
 }
 
@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 145px;
     height: 37px;
 }
@@ -24,7 +25,7 @@
 
     background-color: transparent;
     border: none;
-    border-left: 1.5px solid var(--color);
+    border-left: 3px solid var(--color);
 
     font-weight: 900;
     cursor: pointer;

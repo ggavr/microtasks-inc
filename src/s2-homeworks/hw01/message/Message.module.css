@@ -1,7 +1,7 @@
 .message {
     /*border: 5px solid red;*/
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: flex-end;
 }
 
@@ -10,19 +10,18 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
-    /*margin: 10px;*/
-    /*padding: 10px;*/
 
 }
-
 .imageAndText img {
-    max-height: 50px;}
+    height: 50px;
+    width: 50px;
+}
 .text {
-    width: fit-content;
     background: #0066CC;
     box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
-    margin-right: 5px;
-    border-radius: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px 5px 0px 5px;
 }
 
 .text:after {
@@ -31,6 +30,8 @@
 
 .name {
     color: #FFFFFF;
+    font-weight: bold;
+
     display: flex;
     flex-direction: row-reverse;
     padding-bottom: 5px;
@@ -42,4 +43,6 @@
 }
 
 .time {
+    margin-right: 5px;
+    font-weight: bold;
 }
