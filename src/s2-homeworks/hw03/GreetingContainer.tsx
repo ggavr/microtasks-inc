@@ -17,7 +17,7 @@ export const pureAddUser = (name: string, setError: (v:string)=>void, setName: (
 
 export const pureOnBlur = (name: string, setError: (error:string)=>void) => {
     // если имя пустое - показать ошибку
-    name==='' && setError('Error')
+    name==='' && setError('Error! Name is required')
 }
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: ()=>void) => { // если нажата кнопка Enter - добавить

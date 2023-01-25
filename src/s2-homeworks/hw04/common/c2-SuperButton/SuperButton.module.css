@@ -4,7 +4,7 @@
 
     border-radius: 3px;
     border: none;
-
+/*min-width: 10vw;*/
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -14,8 +14,7 @@
 }
 
 .disabled {
-    color: #002e5c;
-    background: #004d99;
+    color: whitesmoke;
     opacity: 0.5;
 }
 
@@ -56,9 +55,10 @@
 }
 
 .red:active {
-    background: #b31232;
+    /*background: #b31232;*/
 }
 
 .button:disabled {
+    background: #004d99;
     cursor: default;
 }
