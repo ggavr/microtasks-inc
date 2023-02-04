@@ -20,7 +20,8 @@
     display: flex;
     justify-content: end;
     gap: 19px;
-    /*align-items: center;*/
+    align-items: center;
+    flex-wrap: wrap;
 
 }
 

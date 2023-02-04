@@ -1,11 +1,9 @@
 .buttonsContainer {
     /*border: 1px solid red;*/
+    gap: 10px;
     display: flex;
-    justify-content: space-between;
-    align-content: center;
-    width: 20%;
-    margin: 10px 10px;
-    word-wrap: break-word;
+    align-items: center;
+    flex-wrap: wrap;
 
 }
 
