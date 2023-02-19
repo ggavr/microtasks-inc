@@ -1,5 +1,3 @@
-import {AppStoreType} from "./store";
-
 
 const initState = {
     isLoading: false,
