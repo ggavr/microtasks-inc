@@ -19,5 +19,12 @@ html {
 }
 
 .select {
-
+    width: 171px;
+    height: 36px;
+    left: 70px;
+    top: 1019px;
+    border: 1px solid #323232;
+    border-radius: 2px;
+    background-color: var(--background);
+    color: var(--color);
 }
