@@ -31,43 +31,45 @@ const HW13 = () => {
         setText('')
         setInfo('...loading')
 
+
         axios
             .post(url, {success: x})
             .then((res) => {
+                console.log(res)
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
-                setText('...всё ок)\n' +
-                    'код 200 - обычно означает что скорее всего всё ок)')
-                setInfo('')
+                setText(res.data.errorText)
+                setInfo(res.data.info)
 
             })
             .catch((e) => {
-                if (x===false){
-                    setCode('Ошибка 400!')
-                    setImage(error400)
-                    // дописать
-                    setText(`Ты не отправил success в body вообще!
-                    ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!`)
-                    setInfo('')
-                }
-                else if(x===undefined){
-                    setCode('Ошибка 500!')
-                    setImage(errorUnknown)
-                    // дописать
-                    setText(`эмитация ошибки на сервере
-                    ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)`)
-                    setInfo('')
-                }
-                else{
-                    setCode('Error')
-                    setImage(errorUnknown)
-                    // дописать
-                    setText('Network Error\n' +
-                        'AxiosError')
-                    setInfo('')
-                }
-
+                console.log(e)
+                setImage(e.response.status===400 ? error400 : e.response.status===500 ?error500 : errorUnknown)
+                setText(e.response?.data?.errorText||e.message)
+                setInfo(e.response?.data?.info||e.name)
+                // if (x===false){
+                //     setCode('Ошибка 400!')
+                //     setImage(error400)
+                //     // дописать
+                //     setText(e.data.errorText)
+                //     setInfo(e.data.info)
+                // }
+                // else if(x===undefined){
+                //     setCode('Ошибка 500!')
+                //     setImage(error500)
+                //     // дописать
+                //     setText(e.data.errorText)
+                //     setInfo(e.data.info)
+                //
+                // }
+                // else if (x===null){
+                //     setCode('Error')
+                //     setImage(errorUnknown)
+                //     // дописать
+                //     setText(e.message)
+                //     setInfo(e.name)
+                // }
             })
     }
 
