@@ -32,23 +32,53 @@ const HW13 = () => {
         setInfo('...loading')
 
 
+        // axios
+        //     .post(url, {success: x})
+        //     .then((res) => {
+        //         console.log(res)
+        //         setCode('Код 200!')
+        //         setImage(success200)
+        //         // дописать
+        //         setText(res.data.errorText)
+        //         setInfo(res.data.info)
+        //
+        //     })
+        //     .catch((e) => {
+        //         console.log(e)
+        //         setCode(e.response.status===400 ? 'Код 400!' : e.response.status===500 ? 'Код 500!' : 'Error')
+        //         setImage(e.response.status===400 ? error400 : e.response.status===500 ?error500 : errorUnknown)
+        //         setText(e.response?.data?.errorText||e.message)
+        //         setInfo(e.response?.data?.info||e.name)
+        //
+        //     })
         axios
             .post(url, {success: x})
             .then((res) => {
-                console.log(res)
                 setCode('Код 200!')
                 setImage(success200)
-                // дописать
                 setText(res.data.errorText)
                 setInfo(res.data.info)
 
             })
             .catch((e) => {
-                console.log(e)
-                setCode(e.response.status===400 ? 'Код 400!' : e.response.status===500 ? 'Код 500!' : 'Error')
-                setImage(e.response.status===400 ? error400 : e.response.status===500 ?error500 : errorUnknown)
-                setText(e.response?.data?.errorText||e.message)
-                setInfo(e.response?.data?.info||e.name)
+                if (e.response.status === 500) {
+                    setCode('Код 500!')
+                    setImage(error500)
+                    setText(e.response.data.errorText)
+                    setInfo(e.response.data.info)
+                }
+                if (e.response.status === 400) {
+                    setCode('Код 400!')
+                    setImage(error400)
+                    setText(e.response.data.errorText)
+                    setInfo(e.response.data.info)
+                }
+                if (e.code === "ERR_NETWORK") {
+                    setCode('Error')
+                    setImage(errorUnknown)
+                    setText(e.message)
+                    setInfo(e.name)
+                }
 
             })
     }
