@@ -1,19 +1,35 @@
 .buttonsContainer {
+    margin-left: 5vw;
+    width: 75vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2vw;
 }
 
 .responseContainer {
+    margin: 5vw;
+    width: 85vw;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
 }
 
 .imageContainer {
+
 }
 
 .image {
 }
 
 .textContainer{
+
 }
 
 .code {
+    font-weight: bolder;
+    margin-bottom: 1vw;
+
 }
 
 .text {

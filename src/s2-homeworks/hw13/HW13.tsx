@@ -45,31 +45,11 @@ const HW13 = () => {
             })
             .catch((e) => {
                 console.log(e)
+                setCode(e.response.status===400 ? 'Код 400!' : e.response.status===500 ? 'Код 500!' : 'Error')
                 setImage(e.response.status===400 ? error400 : e.response.status===500 ?error500 : errorUnknown)
                 setText(e.response?.data?.errorText||e.message)
                 setInfo(e.response?.data?.info||e.name)
-                // if (x===false){
-                //     setCode('Ошибка 400!')
-                //     setImage(error400)
-                //     // дописать
-                //     setText(e.data.errorText)
-                //     setInfo(e.data.info)
-                // }
-                // else if(x===undefined){
-                //     setCode('Ошибка 500!')
-                //     setImage(error500)
-                //     // дописать
-                //     setText(e.data.errorText)
-                //     setInfo(e.data.info)
-                //
-                // }
-                // else if (x===null){
-                //     setCode('Error')
-                //     setImage(errorUnknown)
-                //     // дописать
-                //     setText(e.message)
-                //     setInfo(e.name)
-                // }
+
             })
     }
 
