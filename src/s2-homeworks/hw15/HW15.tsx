@@ -34,10 +34,10 @@ const getTechs = (params: any) => {
 
 const HW15 = () => {
     const [sort, setSort] = useState('')
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState(1) //current page
     const [count, setCount] = useState(4)
     const [idLoading, setLoading] = useState(false)
-    const [totalCount, setTotalCount] = useState(100)
+    const [totalCount, setTotalCount] = useState(100) //all pages in project
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
@@ -46,21 +46,22 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
                 // сохранить пришедшие данные
-
-                //
+                if (res){
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                }
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
 
-        // setPage(
-        // setCount(
+        setPage(newPage)
+        setCount(newCount)
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery(searchParams)
+        setSearchParams()
 
         //
     }
