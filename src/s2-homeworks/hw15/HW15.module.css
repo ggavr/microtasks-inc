@@ -8,9 +8,12 @@
 
 .techHeader {
     width: 50vw;
+    background-color: lightgray;
 }
 
 .developerHeader {
+    background-color: lightgray;
+    border: 1px solid red;
 
 }
 
@@ -20,6 +23,8 @@
 
 .rowHeader {
     display: flex;
+    border: 1px solid red;
+
 }
 
 .loading {
