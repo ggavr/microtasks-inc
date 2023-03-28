@@ -71,6 +71,10 @@ const HW15 = () => {
         // делает студент
 
         setSort(newSort)
+        // newSort === "up"
+        //     ? techs.map((el, i)=> el).sort((a,b)=>a.tech.localeCompare(b.tech))
+        //     : techs.map((el, i)=> el).sort((a,b)=>b.tech.localeCompare(a.tech))
+
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
         const params = Object.fromEntries(searchParams)
