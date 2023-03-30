@@ -1,9 +1,15 @@
 import React from 'react'
+// import down from ''
+import {AiFillCaretUp, AiOutlineCaretDown} from "react-icons/all";
 
 // добавить в проект иконки и импортировать
+
+// const downIcon = <AiOutlineCaretDown/>
+// const upIcon = <AiFillCaretUp/>
 const downIcon = '[\\/]'
 const upIcon = '[/\\]'
 const noneIcon = '[--]'
+
 
 export type SuperSortPropsType = {
     id?: string
